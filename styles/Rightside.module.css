@@ -1,0 +1,64 @@
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   
+  padding: 64px 72px 0;
+  align-items: flex-start;   
+  text-align: left;         
+  color: #ffffff;
+}
+
+/* éléments internes */
+.logo {
+  width: 50px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.btn {
+  width: 280px;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 9999px;
+  cursor: pointer;
+  margin: 0 ;               
+  display: block;
+}
+
+/* bouton plein bleu */
+.signup {
+  background: #1da1f2;
+  color: #fff;
+  border: none;
+  margin-top: 8px;
+}
+.signup:hover { background: #1a8cd8; }
+
+/* texte “Already …” */
+.loginText {
+  font-size: 14px;
+  text-align: center;
+  margin: 18px 0 10px;
+}
+
+/* bouton contour bleu */
+.signin {
+  background: transparent;
+  color: #1da1f2;
+  border: 1px solid #1da1f2;
+}
+.signin:hover { background: rgba(29, 161, 242, 0.1); }
