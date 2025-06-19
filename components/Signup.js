@@ -1,15 +1,43 @@
-import styles from "../styles/SignUp.module.css"
+import styles from "../styles/Signup.module.css"
 import Image from "next/image";
-import { useState } from "react"
+import { useRouter } from "next/router"
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../reducers/user'
 
 function SignUp() {
+    // Local state variables
     const [firstName, setFirstName] = useState('');
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleClick () {
+    // Redux state
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user.value)
+    console.log(user); //test Majdou
 
+    // Next routing
+    const router = useRouter();
+
+    function handleClick () {
+        fetch("http://localhost:3000/users/signup",{
+            method:'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({firstName, userName, password})
+        })
+        .then(res => res.json())
+        .then(data => {
+            dispatch(login({userName, token: data.token}))
+            setFirstName('');
+            setUserName('');
+            setPassword('');          
+        })
     }
+
+    // if user is signed in, he's redirected towards the "Home" page (which will contain the DisplayedTweets component)
+    if(user.token) router.push('/homepage');
 
   return (
     <div>
