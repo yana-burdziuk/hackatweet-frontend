@@ -5,7 +5,7 @@ import logo from "../public/images/logo-twitter.png";
 function Rightside() {
   return (
   <div className={styles.right}>
-      <img
+      <Image
         src="/images/logo-twitter.png"
         alt="logo"
         width="50"
