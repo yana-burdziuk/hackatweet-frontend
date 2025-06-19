@@ -1,8 +1,93 @@
-.container{
-  display:grid;
-  grid-template-columns:40% 60%;   
-  min-height:100vh;                
-  overflow:hidden;                 
+.container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
 }
 
+.left,
+.center,
+.right {
+    margin-top: 10px;
+    padding-left: 10px;
+}
 
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 100vh; 
+}
+.leftTop {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.userAccount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.userLogo {
+  border-radius: 50%;
+}
+
+.name {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.username {
+  margin-left: 10px;
+  color: #555;
+}
+
+.center {
+  border-left: 1px solid #28313b;
+  border-right: 1px solid #28313b;
+}
+
+.inputTweet {
+  font-size: 20px;
+  height: 15vh;
+  width: 70%;
+  background-color: #15202b;
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #4e555c;
+  padding: 8px;
+  padding-top: 50px;
+  resize: vertical;
+}
+.tweetProperties {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.textCount {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tweetButton {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}

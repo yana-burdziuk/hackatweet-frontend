@@ -1,0 +1,28 @@
+.trendsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 10px;
+  background-color: rgba(85, 85, 85, 0.6);
+  padding: 1rem;
+  border-radius: 20px;
+  max-width: 90%;
+  word-break: break-word;
+  gap: 0.4rem;
+}
+
+.trends {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.hashtag {
+  color: white;
+  font-weight: bold;
+}
+
+.hashtagCount {
+  margin-top: 10px;
+  color: #ccc;
+}
