@@ -8,7 +8,6 @@ import { useState } from "react";
 
 export default function Home() {
   const [tweetText, setTweetText] = useState("");
-  const remainingText = 280 - tweetText.length;
 
   return (
     <main className={styles.container}>
