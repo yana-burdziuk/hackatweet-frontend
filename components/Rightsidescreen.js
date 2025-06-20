@@ -23,7 +23,7 @@ function Rightside() {
       <p className={styles.subtitle}>Join Hackatweet today.</p>
       <button className={`${styles.btn} ${styles.signup}`} onClick = {() => router.push('/signup')}>Sign up</button>
       <p className={styles.loginText}>Already have an account?</p>
-      <button className={`${styles.btn} ${styles.signin}`} onClick = {() => router.push('/signin')}>Sign in</button>
+      <button className={`${styles.btn} ${styles.signin}`}>Sign in</button>
     </div> 
   );
 }
