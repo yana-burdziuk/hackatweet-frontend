@@ -23,9 +23,9 @@
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .btn {
@@ -52,7 +52,7 @@
 .loginText {
   font-size: 14px;
   text-align: center;
-  margin: 18px 0 10px;
+  margin: 18px 0 18px;
 }
 
 /* bouton contour bleu */
