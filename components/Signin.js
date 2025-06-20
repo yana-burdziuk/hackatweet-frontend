@@ -37,24 +37,23 @@ function SignIn() {
     // if user is signed in, he's redirected towards the "Home" page (which will contain the DisplayedTweets component)
     if(user.token) router.push('/homepage');
 
-  return (
-    <div>
+return (
+    <div className={styles.signinpage}>
         <Image
             src="/images/logo-twitter.png"
             alt="logo"
-            width="50"
-            height="50"
+            width="70"
+            height="70"
             className={styles.logo}
         />
+        <h2 className={styles.title}>
+                Log in your Hackatweet account
+        </h2>
         <div className={styles.container}>
-            <h4 className={styles.title}>
-                Log into your Hackatweet account
-            </h4>
-            <input type='text' placeholder="Username" onChange={(e) => setUserName(e.target.value)} value={userName}></input>
-            <input type='text' placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
-
+            <input type='text' placeholder="Username" className={styles.input} onChange={(e) => setUserName(e.target.value)} value={userName}></input>
+            <input type='password' placeholder="Password" className={styles.input} onChange={(e) => setPassword(e.target.value)} value={password}></input>       
             <button className={`${styles.btn} ${styles.signin}`} onClick={handleClick}>Sign in</button>
-        </div> 
+        </div>
     </div>
   );
 }

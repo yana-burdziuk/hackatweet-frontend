@@ -40,24 +40,23 @@ function SignUp() {
     if(user.token) router.push('/homepage');
 
   return (
-    <div>
+    <div className={styles.signuppage}>
         <Image
             src="/images/logo-twitter.png"
             alt="logo"
-            width="50"
-            height="50"
+            width="70"
+            height="70"
             className={styles.logo}
         />
-        <div className={styles.container}>
-            <h4 className={styles.title}>
+        <h2 className={styles.title}>
                 Create your Hackatweet account
-            </h4>
-            <input type='text' placeholder="Firstname" onChange={(e) => setFirstName(e.target.value)} value={firstName}></input>
-            <input type='text' placeholder="Username" onChange={(e) => setUserName(e.target.value)} value={userName}></input>
-            <input type='text' placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
-
+        </h2>
+        <div className={styles.container}>
+            <input type='text' placeholder="Firstname" className={styles.input} onChange={(e) => setFirstName(e.target.value)} value={firstName}></input>
+            <input type='text' placeholder="Username" className={styles.input} onChange={(e) => setUserName(e.target.value)} value={userName}></input>
+            <input type='password' placeholder="Password" className={styles.input} onChange={(e) => setPassword(e.target.value)} value={password}></input>       
             <button className={`${styles.btn} ${styles.signup}`} onClick={handleClick}>Sign up</button>
-        </div> 
+        </div>
     </div>
   );
 }
