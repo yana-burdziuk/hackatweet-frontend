@@ -27,12 +27,9 @@
 }
 
 /* bouton plein blanc */
-.signup {
+.signin {
   background: white;
   color: black;
   border: none;
   margin-top: 8px;
 }
-
-/* HIDE PASSWORDS */
-/* CHANGE VISUAL OF INPUTS */

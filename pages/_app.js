@@ -11,29 +11,33 @@ import { Provider } from "react-redux";
 import user from "../reducers/user"
 
 // Redux persist imports
-import { PersistGate } from 'redux-persist/integration/react';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+// import { PersistGate } from 'redux-persist/integration/react';
+// import { persistStore, persistReducer } from 'redux-persist';
+// import storage from 'redux-persist/lib/storage';
 
-const rootReducer = combineReducers({ user });
-const config = { key: "hackatweet", storage };
+// const rootReducer = combineReducers({ user });
+// const config = { key: "hackatweet", storage };
+
+// const store = configureStore({
+//   reducer: persistReducer(config, rootReducer),
+//   middleware: (getDefaultMiddleWare) => getDefaultMiddleWare({ serializableCheck: false }),
+// })
 
 const store = configureStore({
-  reducer: persistReducer(config, rootReducer),
-  middleware: (getDefaultMiddleWare) => getDefaultMiddleWare({ serializableCheck: false }),
+  reducer: { user }
 })
 
-const persistor = persistStore(store);
+// const persistor = persistStore(store);
 
 function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <PersistGate persistor={persistor}>
+      {/* <PersistGate persistor={persistor}> */}
         <Head>
           <title>Hackatweet</title>
         </Head>
         <Component {...pageProps} />
-      </PersistGate>
+      {/* </PersistGate> */}
     </Provider>
   );
 }
