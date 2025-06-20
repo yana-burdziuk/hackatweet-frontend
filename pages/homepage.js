@@ -1,8 +1,8 @@
-import Home from "../components/Home";
+import DisplayedTweets from "../components/DisplayedTweets";
 
 function HomePage() {
     return (
-        <Home/>
+        <DisplayedTweets/>
     )
 }
 
