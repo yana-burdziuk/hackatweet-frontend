@@ -25,11 +25,11 @@ function SignUp() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({firstName, userName, password})
+            body: JSON.stringify({firstName, username: userName, password})
         })
         .then(res => res.json())
         .then(data => {
-            dispatch(login({userName, token: data.token}))
+            dispatch(login({username: userName, token: data.token}))
             setFirstName('');
             setUserName('');
             setPassword('');          

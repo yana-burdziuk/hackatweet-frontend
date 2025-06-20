@@ -24,11 +24,11 @@ function SignIn() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({userName, password})
+            body: JSON.stringify({username: userName, password})
         })
         .then(res => res.json())
         .then(data => {
-            dispatch(login({userName, token: data.token}))
+            dispatch(login({username: userName, token: data.token}))
             setUserName('');
             setPassword('');          
         })
